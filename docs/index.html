@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Intermediate Domain Alignment and Morphology Analogy for Patent-Product Image Retrieval</title>
+    <meta name="description" content="IDAMA: Intermediate Domain Alignment and Morphology Analogy for Patent-Product Image Retrieval (PPIR). PPIRD dataset and code release.">
     <link rel="stylesheet" href="w3.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <meta name="google-site-verification" content="vIrKe6Ecwa3TVjmMt0OaJpDGw_SJa5IxzTA86wU44QE" />
+    <style>
+        .center_text { text-align: center; }
+        .resource-btn { margin: 0.25rem 0.35rem; min-width: 8.5rem; }
+        .dataset-table { font-size: 0.95rem; }
+        .dataset-table th { background-color: #f1f1f1; }
+    </style>
 </head>
 
 <body>
@@ -19,96 +27,148 @@
 
 <div class="w3-container" id="paper">
     <div class="w3-content" style="max-width:850px">
-  
+
     <h2 align="center" id="title"><b>Intermediate Domain Alignment and Morphology Analogy for Patent-Product Image Retrieval</b></h2>
     <br/>
-    <!-- <p align="center" id="title">Conference Name (NAME), YYYY.</p> -->
 
     <p align="center" class="center_text" id="authors">
-        <a target="_blank" >Haifan Gong </a><sup>1,2 &dagger;</sup>
+        Haifan Gong<sup>1,2 &dagger;</sup>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <a target="_blank" >Xuanye Zhang </a><sup>1,2 &dagger;</sup>
+        Xuanye Zhang<sup>1,2 &dagger;</sup>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <a target="_blank" >Ruifei Zhang</a><sup>1,2</sup>
+        Ruifei Zhang<sup>1,2</sup>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <a target="_blank" >Yun Su</a><sup>3</sup>
+        Yun Su<sup>3</sup>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <a target="_blank" >Zhuo Li</a><sup>1,2</sup>
+        Zhuo Li<sup>1,2</sup>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <a target="_blank" >Yuhao Du</a><sup>1,2</sup>
+        Yuhao Du<sup>1,2</sup>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <a target="_blank" >Anningzhe Gao</a><sup>1,2</sup>
+        Anningzhe Gao<sup>1,2</sup>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <a target="_blank" >Xiang Wan</a><sup>1,2*</sup>
+        Xiang Wan<sup>1,2*</sup>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        <a target="_blank" >Haofeng Li</a><sup>1,2*</sup>
-        &nbsp;&nbsp;&nbsp;&nbsp;        
+        Haofeng Li<sup>1,2*</sup>
     </p>
 
     <p class="center_text" align="center" id="comments">
-        <sup>&dagger;</sup>The two authors contribute equally to this paper
+        <sup>&dagger;</sup>These two authors contributed equally to this work.
     </p>
-    <p class="center_text" align="center" id="comments">
-        <sup>*</sup>Corresponding email: lihaofeng@cuhk.edu.cn  
+    <p class="center_text" align="center" id="corresponding">
+        <sup>*</sup>Corresponding authors. Email: <a href="mailto:lihaofeng@cuhk.edu.cn">lihaofeng@cuhk.edu.cn</a>
     </p>
-    <p class="center_text" align="center">
+    <p class="center_text" align="center" id="affiliations">
         <sup>1</sup>The Chinese University of Hong Kong, Shenzhen
-        &nbsp; &nbsp; &nbsp;
-        <sup>2</sup>Shenzhen Research Institute of Big Data  
-        &nbsp; &nbsp; &nbsp; 
+        &nbsp;&nbsp;&nbsp;
+        <sup>2</sup>Shenzhen Research Institute of Big Data
+        &nbsp;&nbsp;&nbsp;
         <sup>3</sup>University of Waterloo
-        &nbsp; &nbsp; &nbsp;      
     </p>
 
     <br>
-    <center>
-    <img src="paper-teaser.png" style="max-width:50%" /></a>
-    </center><br>
-<!--         <h4 align="center" id="title"><b>Submit to our ScanRefer Localization Benchmark <a href="http://kaldir.vc.in.tum.de/scanrefer_benchmark/" target="__blank">here</a>!</b></h4>
-        <br><center><a href="http://kaldir.vc.in.tum.de/scanrefer_benchmark/" target="__blank"><img src="teaser.png" style="max-width:100%" /></a></center><br> -->
 
-        
-        <h3 class="w3-left-align" id="video"><b>Introduction</b></h3>
-        <p>
-            Recent advances in artificial intelligence have significantly impacted image retrieval tasks, yet Patent-Product Image Retrieval (PPIR) has received limited attention. PPIR, which retrieves patent images based on product images to identify potential infringements, presents unique challenges: (1) both product and patent images often contain numerous categories of artificial objects, but models pre-trained on standard datasets exhibit limited discriminative power to recognize some of those unseen objects; and (2) the significant domain gap between binary patent line drawings and colorful RGB product images further complicates similarity comparisons for product-patent pairs. To address these challenges, we formulate it as an open-set image retrieval task and introduce a comprehensive Patent-Product Image Retrieval Dataset (PPIRD) including a test set with 439 product-patent pairs, a retrieval pool of 727,921 patents, and an unlabeled pre-training set of 3,799,695 images. We further propose a novel Intermediate Domain Alignment and Morphology Analogy (IDAMA) strategy. IDAMA maps both image types to an intermediate sketch domain using edge detection to minimize the domain discrepancy, and employs a Morphology Analogy Filter to select discriminative patent images based on visual features via analogical reasoning. Extensive experiments on PPIRD demonstrate that IDAMA significantly outperforms baseline methods (+7.58 mAR) and offers valuable insights into domain mapping and representation learning for PPIR. 
-
-        </p>
-
-
-        <h3 class="w3-left-align" id="publication"><b>Publication</b></h3>
-        <!-- European Conference on Computer Vision (ECCV), 2020. <br/> -->
-        <!-- <a href="davezchen_eccv2020_scanrefer.pdf" target="__blank">Paper</a>  -->
-        Paper - Coming soon<!--<a href="https://arxiv.org/pdf/???" target="__blank">ArXiv - pdf</a> (<a href="https://arxiv.org/abs/2012.???" target="__blank">abs</a>)-->  | <a href="https://github.com/loslorien/IDAMA" target="__blank">GitHub</a>
-        <center>
-            <a href="https://arxiv.org/pdf/2012.???" target="__blank"></a>
-        </center><br>
-
-        If you find our work useful, please consider citing it:
-        <pre class="w3-panel w3-leftbar w3-light-grey" style="white-space: pre-wrap; font-family: monospace; font-size: 11px">
-
-        
-        Coming soon
-        </pre>
-
-        
-        <h3 class="w3-left-align" id="dataset"><b>Dataset</b></h3>
-        <center>
-            <img src="paper-ppl.png" style="max-width:80%" /></a>
-        </center><br>
-        PPIR is formulated as an <b>open-set image retrieval task </b>to simulate real-world scenarios. <br>
-        
-        <b> Patent-Product Image Retrieval Dataset (PPIRD) </b> comprises two components: (1) a testing set containing 439 product-patent pairs alongside a retrieval pool of 727,921 patent images and (2) an unlabeled pre-training set with 3,799,695 product/patent images. For each product and the corresponding potential patents infringed pair, we additionally offer extremely detailed product descriptions to verify potential patent-patent infringement. (The extremely detailed information required and the difficulties of verify potential patent-patent infringement both limits the infringed product-patent pair scale. ) <br>
-
-        The <b>Intermediate Domain Alignment and Morphology Analogy (IDAMA) </b>strategy for PPIR contains an Intermediate Domain Mapping (IDM) strategy and a Morphology Analogy Filter (MAF) strategy: 1) IDM aligns binary line drawing patent images and colorful RGB product images by mapping them into an intermediate sketch domain using an edge detector. We provide theoretical analysis to prove that this alignment effectively mitigates the domain discrepancy, enabling more accurate retrieval. 2) MAF leverages a cognitive principle of morphology analogy—-an unknown object can be described by analogy to a known object—-by using high classification confidence (regardless of the label) to select discriminative image for artificial patent images for retrieval similarity comparison. By selecting discriminative images for unseen artificial patents, MAF can grasp distinctive visual features of the patents for PPIR. 
-        
+    <div class="text-center">
+        <a class="btn btn-secondary resource-btn disabled" href="#" role="button" aria-disabled="true">Paper (Coming Soon)</a>
+        <a class="btn btn-dark resource-btn" href="https://github.com/haifangong/IDAMA" target="_blank" rel="noopener">Code</a>
+        <a class="btn btn-info resource-btn" href="https://huggingface.co/haifan-gong/IDAMA" target="_blank" rel="noopener">Dataset &amp; Models</a>
     </div>
 
+    <br>
+    <center>
+        <img src="paper-teaser.png" alt="IDAMA overview" style="max-width:50%" />
+    </center>
+    <br>
 
+    <h3 class="w3-left-align" id="introduction"><b>Introduction</b></h3>
+    <p>
+        Recent advances in artificial intelligence have significantly impacted image retrieval tasks, yet <b>Patent-Product Image Retrieval (PPIR)</b> has received limited attention. PPIR retrieves patent images from product images to identify potential infringements and presents two major challenges: (1) both product and patent images contain many categories of artificial objects, while models pre-trained on standard datasets have limited discriminative power on unseen objects; and (2) the large domain gap between binary patent line drawings and colorful RGB product images makes similarity comparison difficult.
+    </p>
+    <p>
+        We formulate PPIR as an <b>open-set image retrieval</b> task and introduce the <b>Patent-Product Image Retrieval Dataset (PPIRD)</b>, together with <b>Intermediate Domain Alignment and Morphology Analogy (IDAMA)</b>. IDAMA maps both image types to an intermediate sketch domain via edge detection to reduce domain discrepancy, and applies a <b>Morphology Analogy Filter (MAF)</b> to select discriminative patent images through analogical reasoning over visual features. On PPIRD, IDAMA significantly outperforms strong baselines (+7.58 mAR) and provides insights into domain mapping and representation learning for PPIR.
+    </p>
+
+    <h3 class="w3-left-align" id="method"><b>Method: IDAMA</b></h3>
+    <p>
+        <b>Intermediate Domain Mapping (IDM).</b> Binary line-drawing patent images and colorful RGB product images are aligned by mapping both into an intermediate sketch domain using an edge detector. Theoretical analysis in the paper shows that this mapping mitigates cross-domain discrepancy and improves retrieval accuracy.
+    </p>
+    <p>
+        <b>Morphology Analogy Filter (MAF).</b> Inspired by the cognitive principle that an unknown object can be described by analogy to a known one, MAF uses high classification confidence (regardless of predicted label) to select discriminative patent images for similarity comparison. By focusing on visually distinctive patents—including unseen artificial objects—MAF improves open-set retrieval for PPIR.
+    </p>
+
+    <h3 class="w3-left-align" id="dataset"><b>Dataset: PPIRD</b></h3>
+    <center>
+        <img src="paper-ppl.png" alt="PPIRD examples" style="max-width:80%" />
+    </center>
+    <br>
+
+    <p>
+        PPIRD is designed to reflect real-world patent infringement search, where the gallery contains patents not seen during training. The benchmark and pre-training resources are released on
+        <a href="https://huggingface.co/haifan-gong/IDAMA" target="_blank" rel="noopener">Hugging Face (haifan-gong/IDAMA)</a>.
+    </p>
+
+    <table class="table table-bordered dataset-table">
+        <thead>
+            <tr>
+                <th>Split / Component</th>
+                <th>Description</th>
+                <th>Scale</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Test queries</b></td>
+                <td>Product–patent pairs with infringement annotations; each pair includes detailed product descriptions for verification.</td>
+                <td>439 pairs</td>
+            </tr>
+            <tr>
+                <td><b>Retrieval gallery</b></td>
+                <td>Patent images used as the open-set retrieval pool at test time.</td>
+                <td>727,921 images</td>
+            </tr>
+            <tr>
+                <td><b>Unlabeled pre-training set</b></td>
+                <td>Large-scale product and patent images for self-supervised / representation learning (including edge-domain variants used by IDAMA).</td>
+                <td>3,799,695 images</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p><b>Task protocol.</b> Given a product image query, the model ranks patent images in the gallery. Correct matches are the annotated infringing patents for that product. Methods are evaluated under the open-set setting: gallery patents are not assumed to be seen during training.</p>
+
+    <p><b>Annotation note.</b> Verified product–patent infringement pairs require extensive product metadata and legal review; this careful curation limits the size of the labeled test set but improves benchmark reliability.</p>
+
+    <p><b>Release contents on Hugging Face.</b> PPIRD data splits (test benchmark, metadata, and pre-training images), pretrained backbones, edge-detector checkpoints, and evaluation assets used in the paper.</p>
+
+    <h3 class="w3-left-align" id="code"><b>Code</b></h3>
+    <p>
+        Official implementation:
+        <a href="https://github.com/haifangong/IDAMA" target="_blank" rel="noopener">github.com/haifangong/IDAMA</a>.
+        The repository includes intermediate-domain preprocessing (edge extraction), feature extraction, retrieval inference, and pre-training scripts (MAE / Swin / iBOT). Download data and model weights from
+        <a href="https://huggingface.co/haifan-gong/IDAMA" target="_blank" rel="noopener">haifan-gong/IDAMA</a> and follow the README for reproduction.
+    </p>
+
+    <h3 class="w3-left-align" id="publication"><b>Publication</b></h3>
+    <p>
+        Paper — Coming soon
+        &nbsp;|&nbsp;
+        <a href="https://github.com/haifangong/IDAMA" target="_blank" rel="noopener">GitHub</a>
+        &nbsp;|&nbsp;
+        <a href="https://huggingface.co/haifan-gong/IDAMA" target="_blank" rel="noopener">Hugging Face (Dataset &amp; Models)</a>
+    </p>
+
+    <p>If you find our work useful, please consider citing:</p>
+    <pre class="w3-panel w3-leftbar w3-light-grey" style="white-space: pre-wrap; font-family: monospace; font-size: 11px">@article{gong2025idama,
+  title   = {Intermediate Domain Alignment and Morphology Analogy for Patent-Product Image Retrieval},
+  author  = {Gong, Haifan and Zhang, Xuanye and Zhang, Ruifei and Su, Yun and Li, Zhuo and Du, Yuhao and Gao, Anningzhe and Wan, Xiang and Li, Haofeng},
+  journal = {Coming soon},
+  year    = {2025}
+}</pre>
+
+    </div>
 </div>
 
 <br/>
 <br/>
 
 </body>
-
 </html>
