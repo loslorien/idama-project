@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Intermediate Domain Alignment and Morphology Analogy for Patent-Product Image Retrieval</title>
-    <meta name="description" content="IDAMA: Intermediate Domain Alignment and Morphology Analogy for Patent-Product Image Retrieval (PPIR). PPIRD dataset and code release.">
+    <meta name="description" content="IDAMA: Intermediate Domain Alignment and Morphology Analogy for Patent-Product Image Retrieval (PPIR). NeurIPS 2025 paper, PPIRD dataset, and code release.">
     <link rel="stylesheet" href="w3.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -17,6 +18,15 @@
         .resource-btn { margin: 0.25rem 0.35rem; min-width: 8.5rem; }
         .dataset-table { font-size: 0.95rem; }
         .dataset-table th { background-color: #f1f1f1; }
+        .publication-badge {
+            display: inline-block;
+            margin-top: 0.5rem;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            background-color: #f1f1f1;
+            font-weight: 600;
+            color: #333;
+        }
     </style>
 </head>
 
@@ -29,6 +39,11 @@
     <div class="w3-content" style="max-width:850px">
 
     <h2 align="center" id="title"><b>Intermediate Domain Alignment and Morphology Analogy for Patent-Product Image Retrieval</b></h2>
+
+    <p align="center" class="center_text">
+        <span class="publication-badge">NeurIPS 2025</span>
+    </p>
+
     <br/>
 
     <p align="center" class="center_text" id="authors">
@@ -44,18 +59,20 @@
         &nbsp;&nbsp;&nbsp;&nbsp;
         Yuhao Du<sup>1,2</sup>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        Anningzhe Gao<sup>1,2</sup>
+        Anningzhe Gao<sup>2</sup>
         &nbsp;&nbsp;&nbsp;&nbsp;
         Xiang Wan<sup>1,2*</sup>
         &nbsp;&nbsp;&nbsp;&nbsp;
-        Haofeng Li<sup>1,2*</sup>
+        Haofeng Li<sup>4,2*</sup>
     </p>
 
     <p class="center_text" align="center" id="comments">
         <sup>&dagger;</sup>These two authors contributed equally to this work.
     </p>
     <p class="center_text" align="center" id="corresponding">
-        <sup>*</sup>Corresponding authors. Email: <a href="mailto:lihaofeng@cuhk.edu.cn">lihaofeng@cuhk.edu.cn</a>
+        <sup>*</sup>Corresponding authors. Email:
+        <a href="mailto:wanxiang@sribd.cn">wanxiang@sribd.cn</a>,
+        <a href="mailto:lihf95@mail.sysu.edu.cn">lihf95@mail.sysu.edu.cn</a>
     </p>
     <p class="center_text" align="center" id="affiliations">
         <sup>1</sup>The Chinese University of Hong Kong, Shenzhen
@@ -63,12 +80,15 @@
         <sup>2</sup>Shenzhen Research Institute of Big Data
         &nbsp;&nbsp;&nbsp;
         <sup>3</sup>University of Waterloo
+        &nbsp;&nbsp;&nbsp;
+        <sup>4</sup>School of Systems Science and Engineering, Sun Yat-sen University
     </p>
 
     <br>
 
     <div class="text-center">
-        <a class="btn btn-secondary resource-btn disabled" href="#" role="button" aria-disabled="true">Paper (Coming Soon)</a>
+        <a class="btn btn-primary resource-btn" href="https://papers.nips.cc/paper_files/paper/2025/hash/154743e7e9688cf77db5ee75807bda82-Abstract-Conference.html" target="_blank" rel="noopener">Paper</a>
+        <a class="btn btn-secondary resource-btn" href="https://papers.nips.cc/paper_files/paper/2025/file/154743e7e9688cf77db5ee75807bda82-Paper-Conference.pdf" target="_blank" rel="noopener">PDF</a>
         <a class="btn btn-dark resource-btn" href="https://github.com/haifangong/IDAMA" target="_blank" rel="noopener">Code</a>
         <a class="btn btn-info resource-btn" href="https://huggingface.co/haifan-gong/IDAMA" target="_blank" rel="noopener">Dataset &amp; Models</a>
     </div>
@@ -127,7 +147,7 @@
             </tr>
             <tr>
                 <td><b>Unlabeled pre-training set</b></td>
-                <td>Large-scale product and patent images for self-supervised / representation learning (including edge-domain variants used by IDAMA).</td>
+                <td>Large-scale product and patent images for self-supervised / representation learning, including edge-domain variants used by IDAMA.</td>
                 <td>3,799,695 images</td>
             </tr>
         </tbody>
@@ -137,7 +157,7 @@
 
     <p><b>Annotation note.</b> Verified product–patent infringement pairs require extensive product metadata and legal review; this careful curation limits the size of the labeled test set but improves benchmark reliability.</p>
 
-    <p><b>Release contents on Hugging Face.</b> PPIRD data splits (test benchmark, metadata, and pre-training images), pretrained backbones, edge-detector checkpoints, and evaluation assets used in the paper.</p>
+    <p><b>Release contents on Hugging Face.</b> PPIRD data splits, test benchmark metadata, pre-training images, pretrained backbones, edge-detector checkpoints, and evaluation assets used in the paper.</p>
 
     <h3 class="w3-left-align" id="code"><b>Code</b></h3>
     <p>
@@ -149,7 +169,13 @@
 
     <h3 class="w3-left-align" id="publication"><b>Publication</b></h3>
     <p>
-        Paper — Coming soon
+        Published in <b>Advances in Neural Information Processing Systems 38 (NeurIPS 2025)</b>.
+        &nbsp;|&nbsp;
+        <a href="https://papers.nips.cc/paper_files/paper/2025/hash/154743e7e9688cf77db5ee75807bda82-Abstract-Conference.html" target="_blank" rel="noopener">NeurIPS Proceedings</a>
+        &nbsp;|&nbsp;
+        <a href="https://papers.nips.cc/paper_files/paper/2025/file/154743e7e9688cf77db5ee75807bda82-Paper-Conference.pdf" target="_blank" rel="noopener">Paper PDF</a>
+        &nbsp;|&nbsp;
+        <a href="https://openreview.net/forum?id=vE98S8BmzP" target="_blank" rel="noopener">OpenReview</a>
         &nbsp;|&nbsp;
         <a href="https://github.com/haifangong/IDAMA" target="_blank" rel="noopener">GitHub</a>
         &nbsp;|&nbsp;
@@ -157,11 +183,13 @@
     </p>
 
     <p>If you find our work useful, please consider citing:</p>
-    <pre class="w3-panel w3-leftbar w3-light-grey" style="white-space: pre-wrap; font-family: monospace; font-size: 11px">@article{gong2025idama,
-  title   = {Intermediate Domain Alignment and Morphology Analogy for Patent-Product Image Retrieval},
-  author  = {Gong, Haifan and Zhang, Xuanye and Zhang, Ruifei and Su, Yun and Li, Zhuo and Du, Yuhao and Gao, Anningzhe and Wan, Xiang and Li, Haofeng},
-  journal = {Coming soon},
-  year    = {2025}
+    <pre class="w3-panel w3-leftbar w3-light-grey" style="white-space: pre-wrap; font-family: monospace; font-size: 11px">@inproceedings{gong2025intermediate,
+  title     = {Intermediate Domain Alignment and Morphology Analogy for Patent-Product Image Retrieval},
+  author    = {Gong, Haifan and Zhang, Xuanye and Zhang, Ruifei and Su, Yun and Li, Zhuo and Du, Yuhao and Gao, Anningzhe and Wan, Xiang and Li, Haofeng},
+  booktitle = {Advances in Neural Information Processing Systems},
+  volume    = {38},
+  year      = {2025},
+  url       = {https://papers.nips.cc/paper_files/paper/2025/hash/154743e7e9688cf77db5ee75807bda82-Abstract-Conference.html}
 }</pre>
 
     </div>
@@ -172,3 +200,4 @@
 
 </body>
 </html>
+```
